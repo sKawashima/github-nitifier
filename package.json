@@ -1,0 +1,21 @@
+{
+  "name": "github-nitifier",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node src/getGitHub.ts"
+  },
+  "dependencies": {
+    "argv": "^0.0.2",
+    "node-notifier": "^5.4.0",
+    "opener": "^1.5.1"
+  },
+  "devDependencies": {
+    "@types/argv": "0.0.4",
+    "@types/axios": "^0.14.0",
+    "@types/node-notifier": "^5.4.0",
+    "ts-node": "^8.2.0",
+    "typescript": "^3.5.1"
+  }
+}
