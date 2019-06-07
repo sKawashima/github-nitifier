@@ -1,4 +1,4 @@
-# web-update-nitifier
+# github-nitifier
 
 ## 使う技術
 
