@@ -13,10 +13,14 @@ const repo = url.pathname.split('/')[2]
 const type = url.pathname.split('/')[3]
 const number = Number(url.pathname.split('/')[4])
 
+import * as dotenv from 'dotenv'
+dotenv.config()
+const env = process.env
+
 import * as Octokit from '@octokit/rest'
 
 const octokit = new Octokit({
-  auth: '982f439cbd9ebd51073eee49e31c41f0a4a72fa9'
+  auth: env.GITHUB_TOKEN
 })
 
 let comments:number = 0
@@ -48,7 +52,9 @@ const checkIssue = () => {
       if (res_comments !== comments) {
         notice(res_comments)
         comments = res_comments
-        console.log(`comments: ${res_comments}`)
+        console.log(`comments: ${res_comments} ${url.toString()}`)
+      } else {
+        console.log('no update')
       }
     })
 }
