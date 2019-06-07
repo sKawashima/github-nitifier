@@ -23,7 +23,7 @@ npm install
 1. [ここ](https://github.com/settings/tokens)から`Generate new token`
 2. noteにラベルを書く（devとか)
 3. repoとuserにチェック
-4. →`Generate token`
+4. `Generate token`
 5. 出てきたトークンをコピペ
 6. ↓を実行
 
