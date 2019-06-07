@@ -57,4 +57,4 @@ checkIssue()
 
 import * as cron from 'node-cron'
 
-cron.schedule('*/10 * * * * *', () => checkIssue())
+cron.schedule('* * * * *', () => checkIssue())
