@@ -26,17 +26,19 @@ const octokit = new Octokit({
 let comments:number = 0
 
 import * as notifier from 'node-notifier'
-import 'opener'
 
+import opener = require("opener")
+
+notifier.on('click', function (notifierObject, options) {
+  console.log('click')
+  console.log(url.toString())
+  opener('https://github.com/mwed/wedding/issues/17917')
+  console.log('opened')
+})
 const notice = (comments_n) => {
   notifier.notify({
       title: url.toString(),
       message: `更新されました: ${comments_n}`,
-  })
-
-  notifier.on('click', function (notifierObject, options) {
-      console.log('click')
-      opener(url.toString())
   })
 }
 
