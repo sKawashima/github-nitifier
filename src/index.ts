@@ -32,7 +32,7 @@ import opener = require("opener")
 notifier.on('click', function (notifierObject, options) {
   console.log('click')
   console.log(url.toString())
-  opener('https://github.com/mwed/wedding/issues/17917')
+  opener(url.toString())
   console.log('opened')
 })
 const notice = (comments_n) => {
