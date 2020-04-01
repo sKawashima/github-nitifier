@@ -43,6 +43,8 @@ const notice = (comments_n) => {
 }
 
 const checkIssue = () => {
+  const now = new Date()
+  const nowText = `[${now.getHours()}:${now.getMinutes()}]`
   octokit.issues
     .get({
         owner: owner,
@@ -54,9 +56,9 @@ const checkIssue = () => {
       if (res_comments !== comments) {
         notice(res_comments)
         comments = res_comments
-        console.log(`comments: ${res_comments} ${url.toString()}`)
+        console.log(`${nowText} comments: ${res_comments} ${url.toString()}`)
       } else {
-        console.log('no update')
+        console.log(`${nowText} no update`)
       }
     })
 }
